@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1909" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRS-ln-HyH">
+                                <rect key="frame" x="264" y="195" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyf-5s-str">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="pjA-ew-Qbd">
+                                <rect key="frame" x="18" y="66" width="564" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoV-zG-wcT">
+                                <rect key="frame" x="191" y="104" width="162" height="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <state key="normal" title="Calculate!">
+                                    <color key="titleColor" red="1" green="0.60032112677696303" blue="0.066947112548619736" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="oyf-5s-str" secondAttribute="leading" id="31o-bJ-xnr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="oyf-5s-str" secondAttribute="leading" id="7vK-Wl-wNo"/>
+                            <constraint firstItem="pjA-ew-Qbd" firstAttribute="width" secondItem="oyf-5s-str" secondAttribute="width" id="AVd-VF-5wI"/>
+                            <constraint firstItem="YRS-ln-HyH" firstAttribute="top" secondItem="eoV-zG-wcT" secondAttribute="bottom" constant="61" id="HcF-kh-Xhp"/>
+                            <constraint firstItem="eoV-zG-wcT" firstAttribute="top" secondItem="pjA-ew-Qbd" secondAttribute="bottom" constant="8" id="OqO-iC-2Vh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YRS-ln-HyH" secondAttribute="trailing" constant="15" id="Vr9-GE-fIR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oyf-5s-str" secondAttribute="trailing" id="Xfj-Mv-SE5"/>
+                            <constraint firstItem="eoV-zG-wcT" firstAttribute="centerX" secondItem="pjA-ew-Qbd" secondAttribute="centerX" id="a4O-uM-42i"/>
+                            <constraint firstItem="pjA-ew-Qbd" firstAttribute="centerX" secondItem="oyf-5s-str" secondAttribute="centerX" id="dSJ-kf-aZy"/>
+                            <constraint firstItem="oyf-5s-str" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ezS-pK-stw"/>
+                            <constraint firstItem="pjA-ew-Qbd" firstAttribute="top" secondItem="oyf-5s-str" secondAttribute="bottom" constant="8" id="lZi-hG-pjO"/>
+                            <constraint firstItem="YRS-ln-HyH" firstAttribute="width" secondItem="eoV-zG-wcT" secondAttribute="width" id="nqZ-py-OC2"/>
+                            <constraint firstItem="YRS-ln-HyH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="qHz-MC-Q76"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oyf-5s-str" secondAttribute="trailing" id="zWZ-iq-XuN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7vK-Wl-wNo"/>
+                                <exclude reference="zWZ-iq-XuN"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZSQ-Xe-N54" appends="YES" id="yqS-kw-NWV"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZSQ-Xe-N54"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="280"/>
+        </scene>
+    </scenes>
+</document>
