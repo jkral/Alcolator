@@ -35,6 +35,9 @@
     }
 }
 - (IBAction)sliderValuedDidChange:(UISlider *)sender {
+    
+//    self.navigationItem.title = @"%@", self.navigationItem.title;
+    
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
 }
