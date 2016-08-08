@@ -38,6 +38,8 @@
     
     self.navigationItem.title = [NSString stringWithFormat:@"%@", self.navigationItem.title];
     self.navigationItem.title = [NSString stringWithFormat:@"%@(%.f shots)", self.navigationItem.title, sender.value];
+    
+//    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 
     
     NSLog(@"Slider value changed to %f", sender.value);
@@ -56,6 +58,9 @@
     float alcoholPercentageOfWine = 0.13;  // 13% is average
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
     float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) numberOfWineGlassesForEquivalentAlcoholAmount]];
+    
     // decide whether to use "beer"/"beers" and "glass"/"glasses"
     NSString *beerText;
     if (numberOfBeers == 1) {
