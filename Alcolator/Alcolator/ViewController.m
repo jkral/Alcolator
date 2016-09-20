@@ -39,14 +39,16 @@
 //    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.navigationItem.title];
 //    self.navigationItem.title = [NSString stringWithFormat:@"%@(%.f shots)", self.navigationItem.title, sender.value];
 
-      [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+//      [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 
 
     
-    NSLog(@"Slider value changed to %f", sender.value);
-    [self.beerPercentTextField resignFirstResponder];
-}
-- (IBAction)buttonPressed:(UIButton *)sender {
+//    NSLog(@"Slider value changed to %f", sender.value);
+//    [self.beerPercentTextField resignFirstResponder];
+//    
+//}
+//
+//- (IBAction)buttonPressed:(UIButton *)sender {
     [self.beerPercentTextField resignFirstResponder];
     // first, calculate how much alcohol is in all those beers...
     int numberOfBeers = self.beerCountSlider.value;
@@ -60,7 +62,7 @@
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
     float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
     
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) numberOfWineGlassesForEquivalentAlcoholAmount]];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d glasses", (int) numberOfWineGlassesForEquivalentAlcoholAmount]];
     
     // decide whether to use "beer"/"beers" and "glass"/"glasses"
     NSString *beerText;
@@ -78,7 +80,21 @@
     // generate the result text, and display it on the label
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
+    
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@""]];
+    
+    int wholeNumberGlasses = numberOfWineGlassesForEquivalentAlcoholAmount;
+    
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%i glasses", wholeNumberGlasses]];
+    
+    
 }
+
+
+
+
+
+
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {
     [self.beerPercentTextField resignFirstResponder];
 }
