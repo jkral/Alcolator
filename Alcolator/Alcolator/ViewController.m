@@ -36,10 +36,10 @@
 }
 - (IBAction)sliderValuedDidChange:(UISlider *)sender {
     
-    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.navigationItem.title];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@(%.f shots)", self.navigationItem.title, sender.value];
+//    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.navigationItem.title];
+//    self.navigationItem.title = [NSString stringWithFormat:@"%@(%.f shots)", self.navigationItem.title, sender.value];
     
-//    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d shots", (int) sender.value]];
 
     
     NSLog(@"Slider value changed to %f", sender.value);
