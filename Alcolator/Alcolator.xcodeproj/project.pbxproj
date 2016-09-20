@@ -13,6 +13,7 @@
 		C522F4321D56713500503D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C522F4301D56713500503D90 /* Main.storyboard */; };
 		C522F4341D56713500503D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C522F4331D56713500503D90 /* Assets.xcassets */; };
 		C522F4371D56713500503D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C522F4351D56713500503D90 /* LaunchScreen.storyboard */; };
+		C522F4401D5696BC00503D90 /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C522F43F1D5696BC00503D90 /* WhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C522F4331D56713500503D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C522F4361D56713500503D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C522F4381D56713500503D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C522F43E1D5696BC00503D90 /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		C522F43F1D5696BC00503D90 /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				C522F4351D56713500503D90 /* LaunchScreen.storyboard */,
 				C522F4381D56713500503D90 /* Info.plist */,
 				C522F4271D56713500503D90 /* Supporting Files */,
+				C522F43E1D5696BC00503D90 /* WhiskeyViewController.h */,
+				C522F43F1D5696BC00503D90 /* WhiskeyViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C522F42F1D56713500503D90 /* ViewController.m in Sources */,
+				C522F4401D5696BC00503D90 /* WhiskeyViewController.m in Sources */,
 				C522F42C1D56713500503D90 /* AppDelegate.m in Sources */,
 				C522F4291D56713500503D90 /* main.m in Sources */,
 			);
